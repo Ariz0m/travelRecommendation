@@ -12,7 +12,7 @@ class Page {
      * Clear the fields on the contact form
      */
     clearContactForm() {
-        Object.values(this.contactForm).forEach((element) => element.value = 0);
+        Object.values(this.contactForm).forEach((element) => element.value = '');
     }
 };
 
