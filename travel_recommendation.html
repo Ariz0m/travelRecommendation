@@ -5,19 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travel Recommendation</title>
         <script src="travel_recommendation.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <span>TravelRecommentation.com</span>
         <nav>
-            <span>TravelRecommentation.com</span>
             <a href="#home">Home</a>
             <a href="#about-us">About Us</a>
             <a href="#contact-us">Contact Us</a>
-            <search>
-                <input type="search" name="searchRecommendation" id="searchBar" placeholder="Enter a destination or keyword">
-                <button onclick="searchRecommendation()" id="searchButton" type="button">Search</button>
-                <button onclick="clearSearchResults()" type="reset">Clear</button>
-            </search>
         </nav>
+        <search>
+            <input type="search" name="searchRecommendation" id="searchBar" placeholder="Enter a destination or keyword">
+            <button onclick="searchRecommendation()" id="searchButton" type="button">Search</button>
+            <button onclick="clearSearchResults()" type="reset">Clear</button>
+        </search>
         <main>
             <div id="home">
                 <h1>Your Dream Destination</h1>
