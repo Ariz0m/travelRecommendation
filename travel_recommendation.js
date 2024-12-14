@@ -69,7 +69,7 @@ function createRecomendations(places) {
 }
 
 async function searchRecommendation() {
-    //clearSearchResults();
+    clearSearchResults();
     const previousRecommendation = document.querySelector('.recommendations');
     if (previousRecommendation) previousRecommendation.remove();
     const recommendation = await getRecommendation();
