@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Recommendation</title>
+        <script src="travel_recommendation.js"></script>
+    </head>
+    <body>
+        <nav>
+            <span>TravelRecommentation.com</span>
+            <a href="#home">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#contact-us">Contact Us</a>
+            <search>
+                <input type="search" name="searchRecommendation" id="searchBar" placeholder="Enter a destination or keyword">
+                <button onclick="searchRecommendation()" id="searchButton" type="button">Search</button>
+                <button type="reset">Clear</button>
+            </search>
+        </nav>
+        <main>
+            <div id="home">
+                <h1>Your Dream Destination</h1>
+                <p>Now is the time for you to fulfill your desired trip. Contact us to make this dream true.</p>
+            </div>
+        </main>
+        <div id="about-us">
+            <h2>About us</h2>
+            <p>Travel Recommendation is a long-time project we build years ago were we were at college. A dream come true and THAT is exactly our GOAL. Make YOUR dream come true. Have you ever visited Tahiti? Did you see the Iguanas, Arthur?
+            </p>
+            <div class="our-team">
+                <article class="team-card">
+                    <h3>Ari Viveros</h3>
+                    <p>With only 22 years he accomplish..</p>
+                    <span>Founder</span>
+                </article>
+                <article class="team-card">
+                    <h3>Juan Perez</h3>
+                    <p>Key member for all Travel Recommendation</p>
+                    <span>CTO</span>
+                </article>
+                <article class="team-card">
+                    <h3>Pepe</h3>
+                    <p>We knew Pepe on the street. But that</p>
+                    <span>COO</span>
+                </article>
+            </div>
+        </div>
+        <div id="contact-us">
+            <h2>Contact us</h2>
+            <h3>We want to hear YOUR feedback</h3>
+            <form action="">
+                <label for="nameForm">Name</label>
+                <input type="text" name="nameForm" id="nameForm" placeholder="Jhon Doe" required>
+                <label for="emailForm">Email</label>
+                <input type="email" name="emailForm" id="emailForm" required placeholder="jhon@doe.com">
+                <label for="messageForm">Message</label>
+                <textarea name="messageForm" id="messageForm" cols="30" placeholder="Enter your message" required></textarea>
+                <button type="submit"></button>
+            </form>
+        </div>
+</body>
+</html>
