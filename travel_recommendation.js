@@ -31,15 +31,15 @@ async function getRecommendation() {
     const page = new Page();
     const search = page.searchBar.value.toLowerCase();
     const data = await (await fetch('travel_recommendation_api.json')).json();
-    switch (search) {
-        case "country":
+    switch (true) {
+        case /\b(countr(y|ies))\b/.test(search):
             const countries = data.countries;
             return countries[0].cities.concat(countries[1].cities, countries[2].cities);
         
-        case 'beach':
+        case /\b(beach(es)?)\b/.test(search):
             return data.beaches;
 
-        case 'temple':
+        case /\b(temple(s)?)\b/.test(search):
             return data.temples;
     
         default:
@@ -69,7 +69,7 @@ function createRecomendations(places) {
 }
 
 async function searchRecommendation() {
-    clearSearchResults();
+    //clearSearchResults();
     const previousRecommendation = document.querySelector('.recommendations');
     if (previousRecommendation) previousRecommendation.remove();
     const recommendation = await getRecommendation();
