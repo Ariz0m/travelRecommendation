@@ -69,6 +69,7 @@ function createRecomendations(places) {
 }
 
 async function searchRecommendation() {
+    clearSearchResults();
     const previousRecommendation = document.querySelector('.recommendations');
     if (previousRecommendation) previousRecommendation.remove();
     const recommendation = await getRecommendation();
@@ -76,3 +77,11 @@ async function searchRecommendation() {
     createRecomendations(recommendation);
 }
 
+function clearSearchResults() {
+    const previousRecommendation = document.querySelector('.recommendations');
+    if (previousRecommendation) {
+        previousRecommendation.remove();
+     new Page().searchBar.value = '';
+    } 
+    else {console.log('There are no recommendations to remove.');}
+}
