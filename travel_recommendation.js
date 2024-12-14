@@ -75,13 +75,13 @@ async function searchRecommendation() {
     const recommendation = await getRecommendation();
     if (typeof(recommendation) === 'string') return alert(recommendation);
     createRecomendations(recommendation);
+    new Page().searchBar.value = '';
 }
 
 function clearSearchResults() {
     const previousRecommendation = document.querySelector('.recommendations');
     if (previousRecommendation) {
         previousRecommendation.remove();
-     new Page().searchBar.value = '';
     } 
     else {console.log('There are no recommendations to remove.');}
 }
